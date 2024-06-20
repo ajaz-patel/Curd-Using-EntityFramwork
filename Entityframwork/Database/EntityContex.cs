@@ -2,7 +2,7 @@
 using Microsoft.Identity.Client;
 using webapi_dotnet_core.Models;
 
-namespace Entityframwork.Database
+namespace webapi_dotnet_core.Database
 {
     public class EntityContex:DbContext
     {

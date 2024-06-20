@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
-using Entityframwork.Database;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using webapi_dotnet_core.Dont_tansfer_Objects;
 using webapi_dotnet_core.Models;
+using webapi_dotnet_core.Database;
+
 
 namespace webapi_dotnet_core.Controllers
 {
@@ -13,9 +14,13 @@ namespace webapi_dotnet_core.Controllers
     {
         EntityContex _entityframework;
 
+        IUserRepository _iuserRepository;
+
         IMapper _mapper;
-        public UserEFController(IConfiguration config) {
+        public UserEFController(IConfiguration config)
+        {
             _entityframework = new EntityContex(config);
+            _iuserRepository = new UserRepository(config);
             _mapper = new Mapper(new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<DtosTOadduser, Usermodel>();
@@ -40,37 +45,37 @@ namespace webapi_dotnet_core.Controllers
             throw new Exception("Failed to get users");
         }
         [HttpPut("/Updateuser/{userid}")]
-        public IActionResult Updateuser(int userid,Usermodel user)
+        public IActionResult Updateuser(int userid, Usermodel user)
         {
-             Usermodel? userup = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
-            if(userup!= null)
+            Usermodel? userup = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
+            if (userup != null)
             {
-                userup.Active=user.Active;
-                userup.Username=user.Username;
-                userup.Age=user.Age;
-                userup.Email=user.Email;
+                userup.Active = user.Active;
+                userup.Username = user.Username;
+                userup.Age = user.Age;
+                userup.Email = user.Email;
                 if (_entityframework.SaveChanges() > 0)
                 {
                     return Ok();
                 }
             }
-          
+
             throw new Exception("failed to update user");
-           
+
         }
         [HttpPost("/Adduser")]
         public IActionResult Adduser(DtosTOadduser user)
         {
-            Usermodel useradd = _mapper.Map<Usermodel>(user);
+             Usermodel useradd = _mapper.Map<Usermodel>(user);
 
-           /* Usermodel? useradd = new Usermodel();
+           // Usermodel? useradd = new Usermodel();
 
-            useradd.Active = user.Active;
+           /* useradd.Active = user.Active;
             useradd.Username = user.Username;
             useradd.Age = user.Age;
             useradd.Email = user.Email;*/
-            _entityframework.Add(useradd);
-                if (_entityframework.SaveChanges() > 0)
+            _iuserRepository.AddEntity(useradd);
+                if (_iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }
@@ -85,8 +90,8 @@ namespace webapi_dotnet_core.Controllers
             Usermodel? userdlt = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
             if (userdlt != null)
             {
-                _entityframework.Remove(userdlt);
-                if(_entityframework.SaveChanges() > 0)
+                _iuserRepository.RemoveEntity(userdlt);
+                if(_iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }
