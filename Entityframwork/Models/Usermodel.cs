@@ -1,4 +1,4 @@
-﻿namespace webapi_dotnet_core.Models
+﻿namespace Entityframwork.Models
 {
     public class Usermodel
     {

@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entityframwork.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
-using webapi_dotnet_core.Models;
 
-namespace webapi_dotnet_core.Database
+
+namespace Entityframwork.Database
 {
     public class EntityContex:DbContext
     {

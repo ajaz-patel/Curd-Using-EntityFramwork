@@ -1,6 +1,7 @@
-﻿using webapi_dotnet_core.Models;
+﻿using Entityframwork.Models;
 
-namespace webapi_dotnet_core.Database
+
+namespace Entityframwork.Database
 {
     public interface IUserRepository
     {

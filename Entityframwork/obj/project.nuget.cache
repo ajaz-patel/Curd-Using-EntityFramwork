@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jaOjQ8PTRi/kN2/1KsEqFZm0MQ//q5fqlaqhhzZgr2IW1rTmOqJ+okjBgQlkGxH5WeSCxWuRsTgw0qSpfGnZvQ==",
+  "dgSpecHash": "y0fp8TdrxhxmVh0M/GSojq6KvjzdwamPEC3s8MuN7nPIvyHeyHM6/udbZeSO+gslnd7N9TIfsFjKifsi2tpsOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Entityframwork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\apatel\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\apatel\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\apatel\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
+    "C:\\Users\\apatel\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\apatel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\apatel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\apatel\\.nuget\\packages\\microsoft.data.sqlclient\\5.2.1\\microsoft.data.sqlclient.5.2.1.nupkg.sha512",

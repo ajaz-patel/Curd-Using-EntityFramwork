@@ -1,4 +1,4 @@
-﻿namespace webapi_dotnet_core.Dont_tansfer_Objects
+﻿namespace Entityframwork.Dont_tansfer_Objects
 {
     public class DtosTOadduser
     {

@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
+using Entityframwork.Database;
+using Entityframwork.Dont_tansfer_Objects;
+using Entityframwork.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using webapi_dotnet_core.Dont_tansfer_Objects;
-using webapi_dotnet_core.Models;
-using webapi_dotnet_core.Database;
 
 
-namespace webapi_dotnet_core.Controllers
+
+namespace Entityframwork.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
