@@ -1,5 +1,9 @@
 ﻿
 
+using System.Linq;
+using System.Security.Cryptography;
+using webapi_dotnet_core.Models;
+
 namespace webapi_dotnet_core.Database
 {
     public class UserRepository: IUserRepository
@@ -28,6 +32,20 @@ namespace webapi_dotnet_core.Database
             {
                 _entityframework.Remove(entity);
             }
+        }
+        public IEnumerable<Usermodel> GetUser()
+        {
+            IEnumerable<Usermodel> user = _entityframework.Usertab.ToList<Usermodel>();
+            return user;
+        }
+        public  Usermodel GetUsersingle(int userid)
+        {
+            Usermodel? user = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
+            if (user != null)
+            {
+                return user;
+            }
+            throw new Exception("Failed to get users");
         }
     }
 }

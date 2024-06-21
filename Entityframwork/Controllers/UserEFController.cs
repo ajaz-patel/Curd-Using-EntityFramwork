@@ -12,14 +12,14 @@ namespace webapi_dotnet_core.Controllers
     [ApiController]
     public class UserEFController : ControllerBase
     {
-        EntityContex _entityframework;
+       // EntityContex _entityframework;
 
         IUserRepository _iuserRepository;
 
         IMapper _mapper;
         public UserEFController(IConfiguration config)
         {
-            _entityframework = new EntityContex(config);
+           // _entityframework = new EntityContex(config);
             _iuserRepository = new UserRepository(config);
             _mapper = new Mapper(new MapperConfiguration(cfg =>
             {
@@ -29,32 +29,34 @@ namespace webapi_dotnet_core.Controllers
         [HttpGet("/user")]
 
         public IEnumerable<Usermodel> GetUser() {
-            IEnumerable<Usermodel> user = _entityframework.Usertab.ToList<Usermodel>();
-            return user;  
+          /*  IEnumerable<Usermodel> user = _entityframework.Usertab.ToList<Usermodel>();
+            return user; */ 
+           return _iuserRepository.GetUser();
         }
 
         [HttpGet("/singleuser/{userid}")]
         public Usermodel GetUsersingle(int userid)
         {
 
-            Usermodel? user = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
+           /* Usermodel? user = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
             if(user!= null)
             {
                 return user;
             }
-            throw new Exception("Failed to get users");
+            throw new Exception("Failed to get users");*/
+           return _iuserRepository.GetUsersingle(userid);
         }
         [HttpPut("/Updateuser/{userid}")]
         public IActionResult Updateuser(int userid, Usermodel user)
         {
-            Usermodel? userup = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
+            Usermodel? userup = _iuserRepository.GetUsersingle(userid);
             if (userup != null)
             {
                 userup.Active = user.Active;
                 userup.Username = user.Username;
                 userup.Age = user.Age;
                 userup.Email = user.Email;
-                if (_entityframework.SaveChanges() > 0)
+                if (_iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }
@@ -87,7 +89,7 @@ namespace webapi_dotnet_core.Controllers
 
         public IActionResult DeleteData(int userid)
         {
-            Usermodel? userdlt = _entityframework.Usertab.Where(u => u.UserId == userid).FirstOrDefault<Usermodel>();
+            Usermodel? userdlt = _iuserRepository.GetUsersingle(userid);    
             if (userdlt != null)
             {
                 _iuserRepository.RemoveEntity(userdlt);
