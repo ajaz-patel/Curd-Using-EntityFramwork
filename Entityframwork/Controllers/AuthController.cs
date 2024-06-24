@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using System;
 using System.Data;
 using System.Security.Cryptography;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Entityframwork.Controllers
         }
         [HttpPost("/Register")]
 
-        public IActionResult Register(UerRegistrationDtos useregister)
+        public IActionResult Register(UserRegistrationDtos useregister)
         {
             if(useregister.Password==useregister.PasswordConfirm)
             {
@@ -38,17 +39,10 @@ namespace Entityframwork.Controllers
                         rng.GetBytes(passwordSalt);
                     }
                     string passwordSaltPlusString = _config.GetSection("Appsettings:PassswordKey").Value + Convert.ToBase64String(passwordSalt);
-
-                    Byte[] passwordHash = KeyDerivation.Pbkdf2(
-                        password: useregister.Password,
-                        salt: Encoding.ASCII.GetBytes(passwordSaltPlusString),
-                        prf: KeyDerivationPrf.HMACSHA256,
-                        iterationCount: 10000000,
-                        numBytesRequested: 256 / 8
-                        );
+                    byte[] passwordHash = GetPassHash(useregister.Password, passwordSalt);
                     string sqlauth = @"INSERT INTO Dotnet.Auth 
-                                        (Email,PasswordHash,PasswordSalt) 
-                                        VALUES('" + useregister.Email + "',@PasswordHash, @PasswordSalt)";
+                                        (Email,PasswordHash,PasswordSalt,FirstName,LastName,ActiveUser) 
+                                        VALUES('" + useregister.Email + "',@PasswordHash, @PasswordSalt,'" + useregister.FirstName + "','" + useregister.LastName + "',1)";
 
                     List<SqlParameter> sqlParameters = new List<SqlParameter>();
 
@@ -63,20 +57,55 @@ namespace Entityframwork.Controllers
 
                     if (_dapper.ExecuteSqlWithParameters(sqlauth, sqlParameters))
                     {
-                     return Ok(); 
+                        /*string sqladduser = @"INSERT INTO Dotnet.Auth 
+                                          (FirstName,LastName,ActiveUser) 
+                                          VALUES('" + useregister.FirstName + "','" + useregister.LastName + "',1)";
+                          if (_dapper.ExecuteSql(sqladduser))
+                          {
+                              return Ok();
+                          }*/
+                        return Ok();
+                        throw new Exception("Failed to add user");
+                       
                     }
                     throw new Exception("Failed to register");
 
                 }
-                throw new Exception("email alrady exisit");
+                return StatusCode(409,"email alrady exisit");
             }
-            throw new Exception("password not match");
+            return StatusCode (401,"password not match");
         }
         [HttpPost("/Login")]
         public IActionResult Login(UserLoginDto userlogind)
         {
+            string passHashAndSalt = "SELECT Email,PasswordHash,PasswordSalt FROM Dotnet.Auth WHERE Email='" + userlogind.Email + "'";
+           
+            UserLoginConfirmationDto userLoginConfirmation = _dapper.LoadDataSingle<UserLoginConfirmationDto>(passHashAndSalt);
+           
+            byte[] passwordHash = GetPassHash(userlogind.Password, userLoginConfirmation.PasswordSalt);
+
+
+            for (int i = 0; i < passwordHash.Length; i++)
+            {
+                if (passwordHash[i] != userLoginConfirmation.PasswordHash[i])
+                {
+                    return StatusCode(401,"Incorrect password");
+                }
+            }
             return Ok();
         } 
+        private byte[] GetPassHash(String Password, byte[] passwordSalt)
+        {
+
+            string passwordSaltPlusString = _config.GetSection("Appsettings:PassswordKey").Value + Convert.ToBase64String(passwordSalt);
+            return KeyDerivation.Pbkdf2(
+                password: Password,
+                salt: Encoding.ASCII.GetBytes(passwordSaltPlusString),
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000000,
+                numBytesRequested: 256 / 8
+                );
+        }
 
 
     }

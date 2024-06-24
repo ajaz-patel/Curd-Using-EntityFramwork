@@ -1,12 +1,17 @@
 ﻿namespace Entityframwork.Don_t_tansfer_Objects
 {
-    public class UerRegistrationDtos
+    public class UserRegistrationDtos
     {
         public string Email { get; set; }
         public string Password { get; set; }
         public string PasswordConfirm { get; set; }
+        public string FirstName {  get; set; }  
+        public string LastName { get; set; }    
 
-        public UerRegistrationDtos() {
+
+        
+
+        public UserRegistrationDtos() {
             if (Email == null)
             {
                 Email = "";
@@ -18,6 +23,15 @@
             if (PasswordConfirm == null) {
                 PasswordConfirm = "";
             }
+            if (FirstName == null)
+            {
+                FirstName = "";
+            }
+            if (LastName == null)
+            {
+                LastName = "";
+            }
+
 
         }
     }
