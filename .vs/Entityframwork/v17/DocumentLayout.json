@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\entityframwork.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\entityframwork.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\database\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\database\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\database\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\database\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\database\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\controllers\\userefcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\controllers\\userefcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\don\u0027t tansfer objects\\userregistrationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\don\u0027t tansfer objects\\userregistrationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\don\u0027t tansfer objects\\userloginconfirmationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\don\u0027t tansfer objects\\userloginconfirmationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\don\u0027t tansfer objects\\dtostoadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\don\u0027t tansfer objects\\dtostoadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\don\u0027t tansfer objects\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\don\u0027t tansfer objects\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|c:\\users\\apatel\\onedrive - stridely solutions india pvt ltd\\c# assingment programme\\entityframwork\\entityframwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F868D813-193C-4C6F-A256-81DA3861E932}|Entityframwork\\Entityframwork.csproj|solutionrelative:entityframwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,24 +30,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Database\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Database\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Database\\UserRepository.cs",
-              "RelativeToolTip": "Entityframwork\\Database\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Program.cs",
+              "RelativeDocumentMoniker": "Entityframwork\\Program.cs",
+              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Program.cs",
+              "RelativeToolTip": "Entityframwork\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T07:13:22.963Z",
+              "WhenOpened": "2024-06-24T11:48:57.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Entityframwork.http",
+              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Entityframwork.http",
+              "RelativeDocumentMoniker": "Entityframwork\\Entityframwork.http",
+              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Entityframwork.http",
+              "RelativeToolTip": "Entityframwork\\Entityframwork.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-06-24T10:17:46.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\appsettings.json",
+              "RelativeDocumentMoniker": "Entityframwork\\appsettings.json",
+              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\appsettings.json",
+              "RelativeToolTip": "Entityframwork\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-24T09:44:11.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Entityframwork\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Entityframwork\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAkwHgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T10:19:48.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Dappercontext.cs",
               "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Database\\Dappercontext.cs",
               "RelativeDocumentMoniker": "Entityframwork\\Database\\Dappercontext.cs",
@@ -77,106 +96,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-21T14:01:29.022Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserEFController.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\UserEFController.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Controllers\\UserEFController.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\UserEFController.cs",
-              "RelativeToolTip": "Entityframwork\\Controllers\\UserEFController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:49:14.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Database\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Database\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Database\\IUserRepository.cs",
-              "RelativeToolTip": "Entityframwork\\Database\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:48:15.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Program.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Program.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Program.cs",
-              "RelativeToolTip": "Entityframwork\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T13:02:59.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DtosTOadduser.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\DtosTOadduser.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Don\u0027t tansfer Objects\\DtosTOadduser.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\DtosTOadduser.cs",
-              "RelativeToolTip": "Entityframwork\\Don\u0027t tansfer Objects\\DtosTOadduser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T10:59:57.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Don\u0027t tansfer Objects\\UserLoginDto.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserLoginDto.cs",
-              "RelativeToolTip": "Entityframwork\\Don\u0027t tansfer Objects\\UserLoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T10:58:12.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Entityframwork\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAqwDQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T10:19:48.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRegistrationDtos.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserRegistrationDtos.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Don\u0027t tansfer Objects\\UserRegistrationDtos.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserRegistrationDtos.cs",
-              "RelativeToolTip": "Entityframwork\\Don\u0027t tansfer Objects\\UserRegistrationDtos.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowAYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:24:15.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserLoginConfirmationDto.cs",
-              "DocumentMoniker": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserLoginConfirmationDto.cs",
-              "RelativeDocumentMoniker": "Entityframwork\\Don\u0027t tansfer Objects\\UserLoginConfirmationDto.cs",
-              "ToolTip": "C:\\Users\\apatel\\OneDrive - Stridely Solutions India pvt ltd\\C# Assingment Programme\\Entityframwork\\Entityframwork\\Don\u0027t tansfer Objects\\UserLoginConfirmationDto.cs",
-              "RelativeToolTip": "Entityframwork\\Don\u0027t tansfer Objects\\UserLoginConfirmationDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T09:32:15.777Z"
             }
           ]
         }

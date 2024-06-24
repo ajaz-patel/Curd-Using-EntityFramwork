@@ -74,3 +74,4 @@ C:\Users\apatel\OneDrive - Stridely Solutions India pvt ltd\C# Assingment Progra
 C:\Users\apatel\OneDrive - Stridely Solutions India pvt ltd\C# Assingment Programme\Entityframwork\Entityframwork\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\apatel\OneDrive - Stridely Solutions India pvt ltd\C# Assingment Programme\Entityframwork\Entityframwork\obj\Debug\net8.0\Entityframwork.sourcelink.json
 C:\Users\apatel\OneDrive - Stridely Solutions India pvt ltd\C# Assingment Programme\Entityframwork\Entityframwork\bin\Debug\net8.0\Dapper.dll
+C:\Users\apatel\OneDrive - Stridely Solutions India pvt ltd\C# Assingment Programme\Entityframwork\Entityframwork\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
