@@ -1,4 +1,5 @@
-﻿namespace Entityframwork.Models
+﻿
+namespace Entityframwork.Models
 {
     public class Usermodel
     {
@@ -21,6 +22,8 @@
                 Email = "";
             }
         }
+
+
     }
    
 }

@@ -1,5 +1,8 @@
 ﻿using Entityframwork.Database;
 using Entityframwork.Don_t_tansfer_Objects;
+using Entityframwork.Helper;
+using Entityframwork.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +17,7 @@ using System.Text;
 
 namespace Entityframwork.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -22,11 +26,15 @@ namespace Entityframwork.Controllers
 
         private readonly IConfiguration _config;
 
+        private readonly AuthHelper _authhelper;
+
         public AuthController(IConfiguration config)
         {
             _dapper = new Dappercontext(config);   
             _config = config;   
+            _authhelper = new AuthHelper(config);
         }
+        [AllowAnonymous]
         [HttpPost("/Register")]
 
         public IActionResult Register(UserRegistrationDtos useregister)
@@ -42,7 +50,7 @@ namespace Entityframwork.Controllers
                         rng.GetBytes(passwordSalt);
                     }
                     string passwordSaltPlusString = _config.GetSection("Appsettings:PassswordKey").Value + Convert.ToBase64String(passwordSalt);
-                    byte[] passwordHash = GetPassHash(useregister.Password, passwordSalt);
+                    byte[] passwordHash = _authhelper.GetPassHash(useregister.Password, passwordSalt);
                     string sqlauth = @"INSERT INTO Dotnet.Auth 
                                         (Email,PasswordHash,PasswordSalt,FirstName,LastName,ActiveUser) 
                                         VALUES('" + useregister.Email + "',@PasswordHash, @PasswordSalt,'" + useregister.FirstName + "','" + useregister.LastName + "',1)";
@@ -78,6 +86,8 @@ namespace Entityframwork.Controllers
             }
             return StatusCode (401,"password not match");
         }
+
+        [AllowAnonymous]
         [HttpPost("/Login")]
         public IActionResult Login(UserLoginDto userlogind)
         {
@@ -85,7 +95,7 @@ namespace Entityframwork.Controllers
            
             UserLoginConfirmationDto userLoginConfirmation = _dapper.LoadDataSingle<UserLoginConfirmationDto>(passHashAndSalt);
            
-            byte[] passwordHash = GetPassHash(userlogind.Password, userLoginConfirmation.PasswordSalt);
+            byte[] passwordHash = _authhelper.GetPassHash(userlogind.Password, userLoginConfirmation.PasswordSalt);
 
 
             for (int i = 0; i < passwordHash.Length; i++)
@@ -99,43 +109,21 @@ namespace Entityframwork.Controllers
             int userId = _dapper.LoadDataSingle<int>(useridsql);
             return Ok(new Dictionary<string, string>
             {
-                {"token",createToken(userId) }
+                {"token",_authhelper.createToken(userId) }
             });
-        } 
-        private byte[] GetPassHash(String Password, byte[] passwordSalt)
-        {
-
-            string passwordSaltPlusString = _config.GetSection("Appsettings:PassswordKey").Value + Convert.ToBase64String(passwordSalt);
-            return KeyDerivation.Pbkdf2(
-                password: Password,
-                salt: Encoding.ASCII.GetBytes(passwordSaltPlusString),
-                prf: KeyDerivationPrf.HMACSHA256,
-                iterationCount: 10000,
-                numBytesRequested: 256 / 8
-                );
         }
-        private string createToken(int userId)
+
+        [HttpGet("/RefreshToken")]
+        public IActionResult RefreshToken()
         {
-            Claim[] claim = new Claim[]
+            string userId = User.FindFirst("UserId")?.Value + "";
+            string useridsql = "select UserId from Dotnet.Auth where UserId='" + userId + "'";
+            int useridfromdb = _dapper.LoadDataSingle<int>(useridsql);
+            return Ok(new Dictionary<string, string>
             {
-                new Claim("userid",userId.ToString())
-            };
-            SymmetricSecurityKey tokenkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("Appsettings:TokenKey").Value));
-            SigningCredentials credentials=new SigningCredentials(tokenkey,SecurityAlgorithms.HmacSha512Signature);
-            SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor()
-            {
-                Subject = new ClaimsIdentity(claim),
-                SigningCredentials = credentials,
-                Expires = DateTime.Now.AddDays(1)
-            };
-            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-            SecurityToken token = handler.CreateToken(descriptor);
-            return handler.WriteToken(token);
+                { "token",_authhelper.createToken(useridfromdb) }
+            });
         }
-           
-
-
-
-
+                
     }
 }
