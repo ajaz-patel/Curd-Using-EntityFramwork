@@ -3,6 +3,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 using Entityframwork.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Entityframwork.Database
 {
@@ -15,27 +16,27 @@ namespace Entityframwork.Database
         {
             _entityframework = new EntityContex(config);     
         }
-        public bool SaveChanges()
+        public async Task<bool> SaveChanges()
         {
-            return _entityframework.SaveChanges() > 0;
+            return await _entityframework.SaveChangesAsync() > 0;
         }
-        public void AddEntity<T>(T entity)
+        public  async Task AddEntity<T>(T entity)
         {
             if(entity != null)
             {
-                _entityframework.Add(entity);
+                await _entityframework.AddAsync(entity);
             }
         }
-        public void RemoveEntity<T>(T entity)
+        public async Task RemoveEntity<T>(T entity)
         {
             if (entity != null)
             {
-                _entityframework.Remove(entity);
+                 _entityframework.Remove(entity);
             }
         }
-        public IEnumerable<Usermodel> GetUser()
+        public async Task<IEnumerable<Usermodel>> GetUser()
         {
-            IEnumerable<Usermodel> user = _entityframework.Usertab.ToList<Usermodel>();
+            IEnumerable<Usermodel> user = await _entityframework.Usertab.ToListAsync<Usermodel>();
             return user;
         }
         public  Usermodel GetUsersingle(int userid)

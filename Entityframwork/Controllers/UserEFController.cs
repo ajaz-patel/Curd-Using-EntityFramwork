@@ -29,10 +29,10 @@ namespace Entityframwork.Controllers
         }
         [HttpGet("/user")]
 
-        public IEnumerable<Usermodel> GetUser() {
+        public async Task<IEnumerable<Usermodel>> GetUser() {
           /*  IEnumerable<Usermodel> user = _entityframework.Usertab.ToList<Usermodel>();
             return user; */ 
-           return _iuserRepository.GetUser();
+           return await _iuserRepository.GetUser();
         }
 
         [HttpGet("/singleuser/{userid}")]
@@ -48,16 +48,16 @@ namespace Entityframwork.Controllers
            return _iuserRepository.GetUsersingle(userid);
         }
         [HttpPut("/Updateuser/{userid}")]
-        public IActionResult Updateuser(int userid, Usermodel user)
+        public async Task<IActionResult> Updateuser(int userid, Usermodel user)
         {
-            Usermodel? userup = _iuserRepository.GetUsersingle(userid);
+            Usermodel? userup =  _iuserRepository.GetUsersingle(userid);
             if (userup != null)
             {
                 userup.Active = user.Active;
                 userup.Username = user.Username;
                 userup.Age = user.Age;
                 userup.Email = user.Email;
-                if (_iuserRepository.SaveChanges())
+                if (await _iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }
@@ -67,7 +67,7 @@ namespace Entityframwork.Controllers
 
         }
         [HttpPost("/Adduser")]
-        public IActionResult Adduser(DtosTOadduser user)
+        public async Task<IActionResult> Adduser(DtosTOadduser user)
         {
              Usermodel useradd = _mapper.Map<Usermodel>(user);
 
@@ -77,8 +77,8 @@ namespace Entityframwork.Controllers
             useradd.Username = user.Username;
             useradd.Age = user.Age;
             useradd.Email = user.Email;*/
-            _iuserRepository.AddEntity(useradd);
-                if (_iuserRepository.SaveChanges())
+            await _iuserRepository.AddEntity(useradd);
+                if (await _iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }
@@ -88,13 +88,13 @@ namespace Entityframwork.Controllers
         }
         [HttpDelete("/Deleteuser/{userid}")]
 
-        public IActionResult DeleteData(int userid)
+        public async Task< IActionResult >DeleteData(int userid)
         {
             Usermodel? userdlt = _iuserRepository.GetUsersingle(userid);    
             if (userdlt != null)
             {
-                _iuserRepository.RemoveEntity(userdlt);
-                if(_iuserRepository.SaveChanges())
+                await _iuserRepository.RemoveEntity(userdlt);
+                if(await _iuserRepository.SaveChanges())
                 {
                     return Ok();
                 }

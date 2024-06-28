@@ -5,10 +5,10 @@ namespace Entityframwork.Database
 {
     public interface IUserRepository
     {
-        public bool SaveChanges();
-        public void AddEntity<T>(T entity);
-        public void RemoveEntity<T>(T entity);
-        public IEnumerable<Usermodel> GetUser();
+        public  Task<bool> SaveChanges();
+        public  Task AddEntity<T>(T entity);
+        public  Task RemoveEntity<T>(T entity);
+        public Task<IEnumerable<Usermodel>> GetUser();
         public Usermodel GetUsersingle(int userid);
     }
 }
